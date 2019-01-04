@@ -23,10 +23,10 @@ parallel 'integration': {
           }
      }
 }
-stage 'approve'
+/* stage 'approve'
 timeout(time: 7, unit: 'SECONDS') {
      input message: 'Do you want to deploy?', submitter: 'anilk'
-}
+} */
 stage name:'deploy', concurrency: 1
 node ('master') {
      unstash 'source'
