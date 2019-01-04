@@ -1,6 +1,6 @@
 stage 'build'
 node ('master'){
-     git 'https://github.com/venkat09docs/webapp.git'
+     git 'https://github.com/chaitanyavaddadi/webapp.git'
      withEnv(["PATH+MAVEN=${tool 'maven3.5.3'}/bin"]) {
           sh "mvn clean package"		  
      }
