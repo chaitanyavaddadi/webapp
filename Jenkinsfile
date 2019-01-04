@@ -24,7 +24,7 @@ parallel 'integration': {
      }
 }
 stage 'approve'
-timeout(time: 7, unit: 'DAYS') {
+timeout(time: 7, unit: 'SECONDS') {
      input message: 'Do you want to deploy?', submitter: 'admin'
 }
 stage name:'deploy', concurrency: 1
